@@ -9,7 +9,7 @@ workers: 6
 batch_size: 32 #32
 num_iter: 80
 valInterval: 5
-saved_model: 'saved_models/en_filtered/iter_100.pth' #'saved_models/en_filtered/iter_100.pth'
+saved_model: '' #'saved_models/en_filtered/iter_100.pth'
 FT: False
 optim: False # default is Adadelta
 lr: 1.
