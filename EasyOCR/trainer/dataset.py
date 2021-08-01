@@ -56,7 +56,6 @@ class Batch_Balanced_Dataset(object):
             _dataset, _dataset_log = hierarchical_dataset(root=opt.train_data, opt=opt, select_data=[selected_d])
             total_number_dataset = len(_dataset)
             log.write(_dataset_log)
-            print(total_number_dataset, ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
             """
             The total number of data can be modified with opt.total_data_usage_ratio.
             ex) opt.total_data_usage_ratio = 1 indicates 100% usage, and 0.2 indicates 20% usage.
@@ -70,8 +69,7 @@ class Batch_Balanced_Dataset(object):
 
             selected_d_log = f'num total samples of {selected_d}: {total_number_dataset} x {opt.total_data_usage_ratio} (total_data_usage_ratio) = {len(_dataset)}\n'
             selected_d_log += f'num samples of {selected_d} per batch: {opt.batch_size} x {float(batch_ratio_d)} (batch_ratio) = {_batch_size}'
-            print(selected_d_log)
-            print("YEs >>>>>>>>>>>>>>>>>>>")   
+            print(selected_d_log)  
             
             log.write(selected_d_log + '\n')
             batch_size_list.append(str(_batch_size))
@@ -124,15 +122,12 @@ def hierarchical_dataset(root, opt, select_data='/'):
     print(dataset_log)
     dataset_log += '\n'
     for dirpath, dirnames, filenames in os.walk(root+'/'):
-        print(dirpath, dirnames)
-
         if not dirnames:
             select_flag = False
             for selected_d in select_data:
                 if selected_d in dirpath:
                     select_flag = True
                     break
-            print(select_flag)
             if select_flag:
                 dataset = OCRDataset(dirpath, opt)
                 sub_dataset_log = f'sub-directory:\t/{os.path.relpath(dirpath, root)}\t num samples: {len(dataset)}'
@@ -145,16 +140,13 @@ def hierarchical_dataset(root, opt, select_data='/'):
     return concatenated_dataset, dataset_log
 
 class OCRDataset(Dataset):
-
     def __init__(self, root, opt):
-
         self.root = root
         self.opt = opt
         print(root)
         self.df = pd.read_csv(os.path.join(root,'labels.csv'), sep='^([^,]+),', engine='python', usecols=['filename', 'words'], keep_default_na=False)
         self.nSamples = len(self.df)
         
-        print(len(self.df))
         if self.opt.data_filtering_off:
             self.filtered_index_list = [index + 1 for index in range(self.nSamples)]
         else:
@@ -168,6 +160,7 @@ class OCRDataset(Dataset):
                 except:
                     print(label)
                 out_of_char = f'[^{self.opt.character}]'
+
                 if re.search(out_of_char, label.lower()):
                     continue
                 self.filtered_index_list.append(index)

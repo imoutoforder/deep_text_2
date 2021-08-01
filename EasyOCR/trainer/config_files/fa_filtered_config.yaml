@@ -1,15 +1,15 @@
 number: '۱۲۳۴۵۶۷۸۹۰'
 symbol: "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~ €"
-lang_char: 'اآبپتسجچحخدذرزژسشصضطظعغفقکگلمنوهی'
+lang_char: 'None'
 experiment_name: 'fa_filtered'
 train_data: 'all_data'
 valid_data: 'all_data/fa_val'
 manualSeed: 1111
 workers: 6
 batch_size: 32 #32
-num_iter: 100
+num_iter: 80
 valInterval: 5
-saved_model: '' #'saved_models/en_filtered/iter_100.pth'
+saved_model: 'saved_models/en_filtered/iter_100.pth' #'saved_models/en_filtered/iter_100.pth'
 FT: False
 optim: False # default is Adadelta
 lr: 1.
