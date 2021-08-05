@@ -7,8 +7,8 @@ valid_data: 'all_data/fa_val'
 manualSeed: 1111
 workers: 6
 batch_size: 32 #32
-num_iter: 80
-valInterval: 5
+num_iter: 20000
+valInterval: 500
 saved_model: '' #'saved_models/en_filtered/iter_100.pth'
 FT: False
 optim: False # default is Adadelta
@@ -24,7 +24,7 @@ total_data_usage_ratio: 1.0
 batch_max_length: 34 
 imgH: 45
 imgW: 120
-rgb: True
+rgb: False
 contrast_adjust: False
 sensitive: True
 PAD: True
