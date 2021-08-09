@@ -1,6 +1,6 @@
 number: '۱۲۳۴۵۶۷۸۹۰'
 symbol: "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~ €"
-lang_char: 'None'
+lang_char: 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ٠١٢٣٤٥٦٧٨٩«»؟،؛ءآأؤإئااًبةتثجحخدذرزسشصضطظعغفقكلمنهوىيًٌٍَُِّْٓٔٱٹپچڈڑژکڭگںھۀہۂۃۆۇۈۋیېےۓە'
 experiment_name: 'fa_filtered'
 train_data: 'all_data'
 valid_data: 'all_data/fa_val'
