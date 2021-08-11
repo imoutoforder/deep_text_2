@@ -1,11 +1,11 @@
 number: '۱۲۳۴۵۶۷۸۹۰'
 symbol: "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~ €"
-lang_char: 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ٠١٢٣٤٥٦٧٨٩«»؟،؛ءآأؤإئااًبةتثجحخدذرزسشصضطظعغفقكلمنهوىيًٌٍَُِّْٓٔٱٹپچڈڑژکڭگںھۀہۂۃۆۇۈۋیېےۓە'
+lang_char: 0123456789!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~ abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ٠١٢٣٤٥٦٧٨٩«»؟،؛ءآأؤإئااًبةتثجحخدذرزسشصضطظعغفقكلمنهوىيًٌٍَُِّْٰٓٔٱٹپچڈڑژکڭگںھۀہۂۃۆۇۈۋیېےۓە
 experiment_name: 'fa_filtered'
 train_data: 'all_data'
 valid_data: 'all_data/fa_val'
 manualSeed: 1111
-workers: 6
+workers: 4
 batch_size: 32 #32
 num_iter: 50000
 valInterval: 1000
@@ -37,8 +37,8 @@ SequenceModeling: 'BiLSTM'
 Prediction: 'CTC'
 num_fiducial: 20
 input_channel: 1
-output_channel: 256
-hidden_size: 256
+output_channel: 512
+hidden_size: 512
 decode: 'greedy'
 new_prediction: False
 freeze_FeatureFxtraction: False
