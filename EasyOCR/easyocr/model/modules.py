@@ -126,6 +126,7 @@ class ResNet_FeatureExtractor(nn.Module):
     def forward(self, input):
         return self.ConvNet(input)
 
+
 class BasicBlock(nn.Module):
     expansion = 1
 

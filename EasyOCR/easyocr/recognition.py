@@ -99,6 +99,7 @@ class AlignCollate(object):
 def recognizer_predict(model, converter, test_loader, batch_max_length,\
                        ignore_idx, char_group_idx, decoder = 'greedy', beamWidth= 5, device = 'cpu'):
     model.eval()
+    print(model)
     result = []
     with torch.no_grad():
         for image_tensors in test_loader:

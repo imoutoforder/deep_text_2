@@ -7,8 +7,8 @@ valid_data: 'all_data/fa_val'
 manualSeed: 1111
 workers: 4
 batch_size: 32 #32
-num_iter: 25000
-valInterval: 5000
+num_iter: 50000
+valInterval: 1000
 saved_model: '' #'saved_models/en_filtered/iter_100.pth'
 FT: False
 optim: False # default is Adadelta
@@ -32,7 +32,7 @@ contrast_adjust: 0.0
 data_filtering_off: False
 # Model Architecture
 Transformation: 'None'
-FeatureExtraction: 'ResNet'
+FeatureExtraction: 'VGG'
 SequenceModeling: 'BiLSTM'
 Prediction: 'CTC'
 num_fiducial: 20

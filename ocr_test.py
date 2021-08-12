@@ -1,10 +1,10 @@
 import easyocr
 import cv2
 import matplotlib.pyplot as plt
-readerEn = easyocr.Reader(['en'])
-readerFa = easyocr.Reader(['fa'])
-readerFa1 = easyocr.Reader(['fa'], recog_network='our_model_50000_122')
-reader = easyocr.Reader(['fa'], recog_network='our_model_50000_122')
+# readerEn = easyocr.Reader(['en'])
+# readerFa = easyocr.Reader(['fa'])
+reader = easyocr.Reader(['fa'], recog_network='model2')
+# reader = easyocr.Reader(['fa'])
 
 img = cv2.imread('/home/yousef/Desktop/mehdiBagheri.jpg')
 img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)

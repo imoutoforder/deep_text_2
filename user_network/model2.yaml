@@ -1,0 +1,11 @@
+network_params:
+  input_channel: 1
+  output_channel: 512
+  hidden_size: 512
+imgH: 64
+lang_list:
+         - 'fa'
+character_list: ۱۲۳۴۵۶۷۸۹۰!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~ €0123456789!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~ abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ٠١٢٣٤٥٦٧٨٩«»؟،؛ءآأؤإئااًبةتثجحخدذرزسشصضطظعغفقكلمنهوىيًٌٍَُِّْٰٓٔٱٹپچڈڑژکڭگںھۀہۂۃۆۇۈۋیېےۓە
+
+
+
